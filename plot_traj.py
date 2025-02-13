@@ -11,7 +11,7 @@ from math import pi, sin, cos
 # Extract data
 data_dir = os.path.join(sys.path[0], "data")
 ### START CODING HERE ### ~ 1 line
-data_file = os.path.join(data_dir, "example_data.csv")  # use your own data
+data_file = os.path.join(data_dir, "vel_data_ground.csv")  # use your own data
 ### END CODING HERE ###
 with open(data_file, newline="") as f:
     reader = csv.reader(f)
@@ -44,13 +44,13 @@ dt = 0.05  # seconds
 for i in range(len(targ_vels)):
     ### START CODING HERE ### ~ 6 lines
     # Compute ideal trajectory
-    dx = None
-    dy = None
-    dth = None
+    dx = targ_vels[i][0] * cos(th[-1])*dt
+    dy = targ_vels[i][0] * sin(th[-1]) * dt
+    dth = targ_vels[i][1] * dt
     # Compute actual trajectory
-    dx_hat = None
-    dy_hat = None
-    dth_hat = None
+    dx_hat = real_vels[i][0] * cos(th_hat[-1]) * dt
+    dy_hat = real_vels[i][0] * sin(th_hat[-1]) * dt
+    dth_hat = real_vels[i][1] * dt
     ### END CODING HERE ###
     # Store ideal state
     x.append(x[-1] + dx)
@@ -86,8 +86,9 @@ ax[1].grid()
 ax[1].legend(["target", "actual"])
 # Title
 ### CHOOSE APPROPRIATE TITLE ###
-fig.suptitle("Trajectory Compare - Noload", fontsize=16)
-plt.savefig("noload_traj.png")
-# fig.suptitle("Trajectory Compare - Ground", fontsize=16)
-# plt.savefig("ground_traj.png")
+# fig.suptitle("Trajectory Compare - Noload", fontsize=16)
+# plt.savefig("noload_traj.png")
+fig.suptitle("Trajectory Compare - Ground", fontsize=16)
+plt.savefig("ground_traj.png")
 plt.show()
+
