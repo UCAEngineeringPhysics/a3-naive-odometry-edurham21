@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/R9LNWs9-)
 # Naive Odometry
 
 ## Objectives
@@ -35,11 +36,11 @@ Then reveal the uploaded trajectory images below.
 
 #### Noload Test Trajectory
 
-![noload_traj](images/noload_traj.png)
+![a3_no_load](https://github.com/user-attachments/assets/2f65bf7a-b0d1-4f3d-8bbb-b2e9bad3c9c8)
 
 #### Ground Test Trajectory
 
-![ground_traj](images/ground_traj.png)
+![a3_ground](https://github.com/user-attachments/assets/c391fa7d-1bf5-4672-b0d3-eb99cdbf8b59)
 
 ## Study Resrouces
 
